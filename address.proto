@@ -1,0 +1,14 @@
+syntax = "proto3";
+package PB.Simple;
+option java_package = "com.model.protobuf";
+
+message SimpleProtoBufMessage {
+	int32 id = 1;
+	string message = 2;
+	enum MessageType {
+		PING = 0;
+		REQUEST = 1;
+		RESPONSE = 2;
+	}
+	MessageType messageType = 3;
+}
